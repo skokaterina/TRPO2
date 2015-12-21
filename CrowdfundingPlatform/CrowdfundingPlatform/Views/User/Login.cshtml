@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Вход";
+}
+
+<div class="content-wrapper create center">
+
+    @using (Html.BeginForm("Login", "User", FormMethod.Post, new { @class = "form-horizontal content-wrapper" }))
+    {
+        <h2>Вход</h2>
+        <div class="clear">
+
+        </div>
+        <form class="login">
+
+            <div class="login_label left_float">
+                Логин
+            </div>
+            <div class="create_edit right_float">
+                @Html.TextBox("Login", ViewData["login"], new { @class = "input", @placeholder = "логин" })
+
+            </div>
+
+            <div class="clear" />
+
+            <div class="login_label left_float">
+                Пароль
+            </div>
+            <div class="create_edit right_float">
+                @Html.Password("Password", ViewData["password"], new { @class = "input", @placeholder = "пароль" })
+
+            </div>
+
+
+            <div class="clear">
+
+            </div>
+
+            @* <div class="button_div login_button">
+                    <input class=" simple_input font_label" type="submit" value="Войти" />
+                </div> *@
+
+            <div class="div_input">
+                <input class=" simple_input font_label" type="submit" value="Войти" />
+            </div>
+
+            @*
+                            <div class="create">
+                <div class="login_input center">
+                    <p>
+                        <input class="create_input font_label" type="submit" value="Войти" />
+                    </p>
+                </div>
+            *@
+        </form>
+
+    }
+</div>

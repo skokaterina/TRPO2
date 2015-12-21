@@ -1,0 +1,72 @@
+﻿@model IEnumerable<CrowdfundingPlatform.Models.Award>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="create center">
+    <h2>Вознаграждения</h2>
+
+    @if (ViewBag.OwnerName == User.Identity.Name)
+    {
+        <div class="div_input font_label">
+            @Html.ActionLink("Создать вознаграждение", "CreateAward", new { ProjectId = ViewBag.ProjectId })
+        </div>
+
+    }
+</div>
+
+    <table class="content-wrapper table  center">
+        <tr class="font_label">
+
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qty)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Qty)
+                </td>
+                <td>
+
+                    @if (ViewBag.OwnerName == User.Identity.Name)
+                    {
+                        @Html.ActionLink("Редактировать", "Edit", new { id = item.Id })
+                        @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+                    }
+                    else
+                    {
+
+                        if (Request.IsAuthenticated)
+                        {
+                            
+                        <span class="div_input font_label">
+                            @Html.ActionLink("Купить", "Buy", new { id = item.Id })
+                            </span>
+                        }
+                    }
+
+                </td>
+            </tr>
+        }
+
+    </table>

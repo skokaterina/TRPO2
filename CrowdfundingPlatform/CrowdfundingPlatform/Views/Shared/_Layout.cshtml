@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<body id="body">
+    <div class="hello">
+        @if (Request.IsAuthenticated)
+        {
+            <div class="logo_greeting">
+                <i>Здравствуйте, @User.Identity.Name !</i>
+            </div>
+        }
+    </div>
+    <div class="clear"> </div>
+    <div class="nav_header">
+        <div class="left_float">
+            <ul class="nav_ul left">                
+                <li>
+                    @Html.ActionLink("Проекты", "Index", "Project")
+                </li>
+                @if (Request.IsAuthenticated)
+                {
+                <li>
+                    @Html.ActionLink("Заказы", "Basket", "User")
+                </li>
+                }
+            </ul>
+        </div>
+
+
+        <div class="right_float">
+            <ul class="nav_ul ">
+                
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>
+                            @Html.ActionLink("Выход", "Logout", "User")
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            @Html.ActionLink("Вход", "Login", "User")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Регистрация", "Create", "User")
+                        </li>
+                    }
+
+</ul>
+        </div>
+    </div>
+        <div id="body" class="content-wrapper">
+            <section>
+
+                @RenderBody()
+            </section>
+        </div>
+
+        <footer>
+            <div class="content-wrapper">
+                <hr />
+                <p>&copy; @DateTime.Now.Year — 8вм54</p>
+
+            </div>
+        </footer>
+
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

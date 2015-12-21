@@ -1,0 +1,41 @@
+﻿@model CrowdfundingPlatform.Models.Award
+@{
+    ViewBag.Title = "Купить вознаграждение";
+}
+
+
+<h2>Вы действительно хотите приобрести вознаграждение ?</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.ProjectId)
+
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Name)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Name)
+</div>
+
+
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Description)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Description)
+</div>
+
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Price)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Price)
+</div>
+
+    <p>
+        <input type="submit" value="Купить" /> |
+        @Html.ActionLink("Вернуться к списку", "Index")
+    </p>
+}

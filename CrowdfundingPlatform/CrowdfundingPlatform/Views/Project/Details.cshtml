@@ -1,0 +1,84 @@
+﻿@model CrowdfundingPlatform.Models.Project
+
+@{
+    ViewBag.Title = "Проект";
+}
+
+
+<div class="create center">
+
+    <h2>Проект</h2>
+
+    <div class="div_input font_label">
+       @Html.ActionLink("Вознаграждения", "AwardsList", new { ProjectId = Model.Id })
+    </div>
+</div>
+
+<fieldset>
+
+
+    
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateCreated)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateStarted)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateStarted)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Deadline)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Deadline)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RequiredAmount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RequiredAmount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User.Login)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User.Login)
+    </div>
+</fieldset>
+<p>
+    @if (Model.Owner == User.Identity.Name )
+    {
+        @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) 
+    }
+    @Html.ActionLink("Вернуться к списку", "Index")
+</p>

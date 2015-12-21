@@ -1,0 +1,669 @@
+﻿body {
+    font-size: 12px;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+/* ---------------------- sk ----------------------*/
+h3{
+    margin: 50px;
+}
+
+
+.update_head{
+    align-content:center;
+}
+
+table.table_head{
+    width: 50%;
+    margin: 3% 25%;
+   /* background: rgb(245, 245, 245);*/
+    border-radius: 15px;
+    border-bottom: 2px solid rgb(165, 165, 165);
+    border-top: 2px solid rgb(165, 165, 165);
+}
+.table_head td {
+    padding: 15px 5px 15px 5px;   
+}
+.table_head td.table_head_hidden {
+    padding: 0px;
+}
+
+.table_head  td.font_label{
+    font-size: 16px;
+    color: rgb(30, 121, 151);
+    text-align: center;
+    background: rgba(243, 243, 243, 0.55);
+
+}
+
+
+
+.table_lines{
+    /* background: rgb(245, 245, 245);*/
+      margin: 2% 0;
+}
+.table_lines th{
+    text-align: center;
+    border-bottom: 2px solid rgb(165, 165, 165);
+    padding: 7px 0px;
+    color: rgb(30, 151, 30);
+    font-size: 20px;
+    background: rgba(243, 243, 243, 0.55);
+}
+
+.table_lines th:first-child{
+    text-align: left;
+}
+
+.font_label{   
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(110, 110, 110); 
+    padding: 2px;
+}
+.font_label_small{
+    font-size: 12px;
+    font-weight: normal; 
+}
+/* nav */
+.nav_header{
+    color: white;
+    width: 100%;
+    display: inline-block;
+    height: 66px;
+    padding: 0 8% 0 8%;
+    border-bottom: 1px solid rgb(188, 187, 187);    
+    background: linear-gradient(to top, rgb(221, 221, 221) 0%, #BDBDBD 30%, rgb(221, 221, 221) 100%);
+}
+
+.nav_ul{
+    /*margin: 0;
+    padding: 15px 2px 15px 2px; */
+}
+
+.nav_ul li{
+    display: inline-block;
+    padding: 25px 25px 23px 25px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top: 1px solid rgb(153, 148, 148);
+    border-right: 1px solid rgb(166, 166, 166);
+    border-left: 0.5px solid rgb(166, 166, 166);
+    background: linear-gradient(to top, rgb(103, 232, 32) 0%, #0BA919 35%, rgb(184, 243, 162) 100%);
+}
+
+.nav_ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav_ul li:hover {    
+    
+    background: linear-gradient(to top, rgb(226, 133, 77) 0%, #CF6F03 30%, rgb(221, 221, 221) 100%);
+}
+.nav_ul li a:hover {
+    width: 100%;
+    height: 100%;
+}
+
+/* a, input*/
+.div_input {
+     height: 30px;
+     border-radius: 10px;
+     margin-top: 20px;
+}
+.div_input input, .div_input a {
+     border-radius: 10px;
+     display: block; 
+     text-align: center;
+     
+	 width: 50%;
+     color: rgb(110, 110, 110); 
+     background: white;
+     border: 1px solid rgb(110, 110, 110);
+}
+.div_input a {
+    padding: 2px;
+}
+
+.div_input input:hover, .div_input  a:hover{
+    background: rgba(0, 146, 255, 0.94);
+    color: white;
+    border: 1px solid rgba(0, 146, 255, 0.94);
+}
+.div_input  a:hover{
+    background: rgb(244, 129, 72);
+    color: white;
+    border: 1px solid rgb(244, 129, 72);
+}
+
+.create_profile{
+    width: 500px;
+}
+#Profile_OrgUnitId{
+    width: 90%;
+}
+/* ---------------------- sk ----------------------*/
+
+/* SEV
+-----------------------------------------------------------*/
+
+/* приветствие */
+.logo {
+    /*background-color:   rgb(253, 253, 253); */
+   /*background-color: rgb(73, 66, 66); */ 
+    display: inline-block;
+    width: 100%;   
+    background: rgb(41, 41, 41);
+}
+
+.logo_img{
+    width: 700px; 
+   /* height:200px; 
+    width: 600px;*/
+    /*padding: 3% 0 4% 30%; */
+    padding: 0 0 0 0%;
+}
+.slide_img{
+ 
+    width: 100%;
+    /*padding: 3% 0 4% 30%; */
+    padding: 0 0 0 0%;
+}
+
+.hello{
+    background: rgb(104, 104, 104);
+    text-align: right;
+    color: white;
+}
+
+
+.logo_greeting{
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(144, 144, 144);
+}
+
+/* добро пожаловать */
+.home{
+    margin: 20px;
+}
+
+.home_img{
+    width: 800px;
+}
+
+/* о компании */
+.about{
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+.about_history{
+    background: url(../Img/about_history.jpg) ;
+    padding: 30px 10px 30px 10px;
+    border-radius: 20px;
+    font-style: oblique;
+    margin-top: 20px;
+}
+.about_mission{
+    margin: 20px;
+}
+
+.about_retail{
+    display: inline-block;
+    width: 600px;
+}
+
+.about_retail div{
+    margin: 5px;
+}
+
+.about_ret_p{
+    width: 520px;
+}
+
+.about_ret_p p{
+    text-indent: 0px;
+}
+
+.about p{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+/* вход */
+
+.form-actions{
+    margin-top: 50px;
+}
+
+.input{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+.control-label{
+    margin-right: 20px;
+   
+}
+.controls{
+    margin: 20px;
+    text-align: center;
+    
+}
+
+.answer{
+     width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+h4{
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(110, 110, 110);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #FFF5EC  !important;
+    -webkit-text-fill-color: #999 !important;
+    color: #999 !important;
+}
+.button{
+    color: white;
+    background: linear-gradient(to top,rgb(31, 216, 198) 0%, #0BA6A9 30%, rgb(31, 216, 198) 100%);
+    border: 1px solid rgb(191, 191, 191);
+    padding: 3px 6px;
+    
+}
+
+.sbtn:hover{
+    
+    color: white;
+}
+.form-horizontal{
+    margin-top: 100px;
+}
+
+.img-rounded{
+    height: 200px;
+    width: 500px;
+}
+
+.center{
+    text-align: center;
+}
+
+.tabbable{
+    display: inline-block;
+}
+
+/* all */
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 1060px;
+}
+
+.right_float{
+    float: right;
+}
+
+.left_float{
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.left_text{
+    text-align: left;
+}
+a{
+    color: rgb(110, 110, 110);
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+th{
+    text-align: center;
+}
+.table:first-child{
+    border-top: none;
+}
+tbody tr:hover{
+   /* background: rgb(34, 178, 41); */
+   /* background: rgb(90, 202, 127); */
+    border-radius: 10px;
+   /* color: white; */
+}
+tbody tr{
+    border-radius: 10px;
+}
+
+td.link_answer {
+    border-style: hidden;
+}
+.button_div_size{
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+ 
+#body{   
+    /*background-color: rgb(241, 241, 241);*/
+    background-image:url(/Img/pic1.jpg)  repeating-linear-gradient();
+    color: rgb(29, 76, 34);
+}
+
+
+.button_div{
+  
+    padding: 2px 10px;
+    border: 1px solid rgb(110, 110, 110);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+/*
+.button_div input {
+        display: block;
+        height: 100%;
+        text-align: center;
+}*/
+
+.button_div:hover{
+    background: rgb(90, 202, 127);
+    color: white;
+    border: 1px solid rgb(90, 202, 127);
+}
+
+.login_button:hover{
+    background: rgb(77, 186, 255);
+    color: white;
+    border: 1px solid rgb(77, 186, 255);
+}
+
+
+
+.login_label{   
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(110, 110, 110); 
+}
+
+.plines_text{   
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(110, 110, 110); 
+    margin: 15px;
+}
+
+.uploadimg{
+    margin: 0 25%;
+}
+input[type="file"] {
+  display: inline;
+  margin: 15px;
+  font-style: italic;
+}
+
+
+<!-- I E -->
+
+.nav_header_explorer{
+    color: white;
+    width: 100%;
+    display: inline-block;
+    height: 60px;
+    padding: 0 8% 0 8%;
+    border-bottom: 1px solid rgb(196, 196, 196);  
+    background-color: lightGrey;
+}
+
+.nav_ul_explorer{
+    margin: 0;
+    padding: 15px 2px 15px 2px;
+}
+.nav_ul_explorer li {
+    display: inline;
+    padding: 17px 25px 28px 25px;
+    border-top: 1px solid rgb(153, 148, 148);
+    border-right: 1px solid rgb(166, 166, 166);
+    border-left: 0.5px solid rgb(166, 166, 166);
+    background-color: lightSeaGreen;
+    }
+
+.nav_ul_explorer a{
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+<!-- I E -->
+
+
+
+/* пользователи */
+.user_table{
+    width: 70%;
+}
+
+.user_nav{
+    padding-top: 3%;
+}
+
+/* создание */
+
+.create{
+    display: inline-block;
+    width: 450px;
+    padding: 20px;
+    /* margin-left: 25%; */
+    margin: 30px 30px 30px 25%;
+}
+
+
+.create_label{
+    padding: 10px;
+}
+
+.create_edit{
+    padding: 10px;
+}
+.create_edit input, select{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+
+}
+
+table .create_edit input, select {
+    width: 200px;
+}
+
+.create_input{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    background: linear-gradient(to top, rgb(124, 215, 105) 0%, #0BA919 30%, rgb(214, 242, 204) 100%);
+    color: white;
+
+}
+.create_input:hover{
+    background: linear-gradient(to top, rgb(226, 133, 77) 0%, #CF6F03 30%, rgb(221, 221, 221) 100%);
+}
+.display_field
+{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+    text-align: center;
+    font-style: italic;
+}
+
+.icon{
+    width: 40px;
+}
+
+user_nav{
+    text-decoration: none;
+    
+     overflow:hidden; 
+ 
+}
+
+.day_dd{
+    width: 20%;
+}
+
+.month_dd{
+    width: 40%;
+}
+
+.year_dd{
+    width: 30%;
+}
+
+.dd{
+    width: 220px;
+}
+
+#Profile_LastNameCashier{
+    width: 60%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#Profile_FirstNameCashier{
+    width: 15%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#Profile_MiddleNameCashier{
+    width: 15%;
+    height: 30px;
+    border-radius: 10px;
+}
+.login_input{
+    display: inline-block;
+    width: 300px;
+}
+
+.settings{
+    width: 700px;
+}
+.settings div.create_edit input{
+    width: 400px;
+}
+
+
+.simple_input{
+    border: none;
+    background: none;
+}
+
+.settings div.button_div:hover{
+    background: rgb(44, 186, 239);
+    color: white;
+    border: 1px solid rgb(90, 202, 127);
+}
+
+.index_filter{
+    width: 90px;
+}
+
+.index_input{
+      background: rgb(182, 182, 182);
+  border-radius: 10px;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border: none;
+}
+
+.index_input:hover{
+    background: rgb(66, 204, 49);
+  border-radius: 10px;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border: none;
+}
+
+
+
+/* 
+#user_menu{
+    visibility:hidden;
+}*/
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}

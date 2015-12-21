@@ -1,0 +1,40 @@
+﻿@model IEnumerable<CrowdfundingPlatform.Models.Basket>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Заказы</h2>
+
+
+<table class="content-wrapper table  center">
+    <tr class="font_label">
+
+        <th>
+            @Html.DisplayNameFor(model => model.Award.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Award.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+
+    </tr>
+    }
+
+</table>

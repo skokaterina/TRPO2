@@ -1,0 +1,82 @@
+﻿@model CrowdfundingPlatform.Models.Project
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="create center">
+
+    <h2>Редактировать проект</h2>
+
+    <div class="div_input font_label">
+        @Html.ActionLink("Вознаграждения", "AwardsList", new { ProjectId = Model.Id })
+    </div>
+</div>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Project</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateStarted)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DateStarted)
+            @Html.ValidationMessageFor(model => model.DateStarted)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Deadline)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Deadline)
+            @Html.ValidationMessageFor(model => model.Deadline)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RequiredAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RequiredAmount)
+            @Html.ValidationMessageFor(model => model.RequiredAmount)
+        </div>
+
+     
+
+       
+
+        <p>
+            <input type="submit" value="Сохранить" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
